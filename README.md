@@ -1,4 +1,4 @@
 MapReduce
 =========
-This project introduces Cloudgene. It shows how a simple WordCount is executed with Hadoop Mapreduce using the standard interfaces. We show how the genepi-hadoop library can be used efficiently to distribute parameters, using the distributed cache or guarantee the correct order of calls.
-The tutorial further shows how to plugin applications (such as WordCount) to use it graphically 
+This tutorial introduces Cloudgene. It shows how a simple WordCount program is designed with Hadoop Mapreduce using the standard interfaces. We introduce the genepi-hadoop library to efficiently distribute parameters, using the distributed cache and guarantee the correct order of calls.
+The tutorial further shows how to connect applications (such as WordCount) into Cloudgene to execute them graphically.
