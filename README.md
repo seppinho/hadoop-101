@@ -43,26 +43,30 @@ The tutorial further shows how to connect applications (such as WordCount) into 
 
 #### Executing Job
 
-	Configuration conf = new Configuration();
-	String[] otherArgs = new GenericOptionsParser(conf, args)
-			.getRemainingArgs();
-	if (otherArgs.length != 2) {
-		System.err.println("Usage: wordcount <in> <out>");
-		System.exit(2);
-	}
-	Job job = new Job(conf, "word count");
-	job.setJarByClass(WordCount.class);
-	job.setMapperClass(TokenizerMapper.class);
-	job.setCombinerClass(IntSumReducer.class);
-	job.setReducerClass(IntSumReducer.class);
-	job.setOutputKeyClass(Text.class);
-	job.setOutputValueClass(IntWritable.class);
-	FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
-	FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
-	if (job.waitForCompletion(true)){
-		System.exit(0);
-	}else{
-		System.exit(1);
+ 	public static void main(String[] args) throws Exception {
+
+		Configuration conf = new Configuration();
+		String[] otherArgs = new GenericOptionsParser(conf, args)
+				.getRemainingArgs();
+		if (otherArgs.length != 2) {
+			System.err.println("Usage: wordcount <in> <out>");
+			System.exit(2);
+		}
+		Job job = new Job(conf, "word count");
+		job.setJarByClass(WordCount.class);
+		job.setMapperClass(TokenizerMapper.class);
+		job.setCombinerClass(IntSumReducer.class);
+		job.setReducerClass(IntSumReducer.class);
+		job.setOutputKeyClass(Text.class);
+		job.setOutputValueClass(IntWritable.class);
+		FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
+		FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
+		if (job.waitForCompletion(true)){
+			System.exit(0);
+		}else{
+			System.exit(1);
+		}
+		
 	}
 
 ### Executing Word Count using genepi-hadoop
@@ -115,6 +119,8 @@ The tutorial further shows how to connect applications (such as WordCount) into 
 
 #### Execute it through a command-line program
 
+Extend you Step class by a main method and use the StepRunner class to start your WorkflowStep class:
+
 	  public static void main(String[] args) throws Exception {
 	  
 	      boolean result = StepRunner.run(args, new WordCountStep());
@@ -125,6 +131,11 @@ The tutorial further shows how to connect applications (such as WordCount) into 
 	          System.exit(1);
 	      }
 	  }
+
+The compiled programm is jar file which can be executed with the following command:
+
+	hadoop jar Examples.jar --input bigfile.txt --output wc_out.txt
+
 
 ### Cloudgene Integration
 
