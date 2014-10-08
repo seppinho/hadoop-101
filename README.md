@@ -8,7 +8,7 @@ The tutorial further shows how to connect applications (such as WordCount) into 
 ### Word Count Example
 
 #### Mapper
-	public static class TokenizerMapper extends
+	public class TokenizerMapper extends
 			Mapper<Object, Text, Text, IntWritable> {
 
 		private final static IntWritable one = new IntWritable(1);
@@ -26,7 +26,7 @@ The tutorial further shows how to connect applications (such as WordCount) into 
 
 #### Reducer
 
-	public static class IntSumReducer extends
+	public class IntSumReducer extends
 			Reducer<Text, IntWritable, Text, IntWritable> {
 		private IntWritable result = new IntWritable();
 
@@ -69,11 +69,13 @@ The tutorial further shows how to connect applications (such as WordCount) into 
 		
 	}
 
+----------------------------
+
 ### Executing Word Count using genepi-hadoop
 
 #### Extend HadoopJob by overriding the  setupJob method
 
-	public static class WordCountJob extends HadoopJob {
+	public class WordCountJob extends HadoopJob {
 
 		public WordCountJob() {
 			super("Word Count");
@@ -136,6 +138,8 @@ The compiled programm is jar file which can be executed with the following comma
 
 	hadoop jar Examples.jar --input bigfile.txt --output wc_out.txt
 
+
+----------------------------
 
 ### Cloudgene Integration
 
