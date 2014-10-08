@@ -130,8 +130,7 @@ The tutorial further shows how to connect applications (such as WordCount) into 
 
 #### Command-Line program
 
-  steps:
-   	
+ steps:
     - name: Wordcount
       jar: Examples.jar
       params: --input $input --output $output
@@ -139,8 +138,7 @@ The tutorial further shows how to connect applications (such as WordCount) into 
 
 #### Directly by specifying the classname
 
-  steps:
-
+ steps:
     - name: Wordcount
       jar: Examples.jar
       classname: wordcount.WordCountStep
