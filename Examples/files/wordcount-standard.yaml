@@ -22,7 +22,7 @@ mapred:
 
     - name: Wordcount
       jar: Examples.jar 
-      params: wordcount.WordCountStandard $input $output
+      params: wordcount.WordCount $input $output
 
   inputs:
 

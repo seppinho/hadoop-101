@@ -31,7 +31,7 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class WordCountStandard {
+public class WordCount {
 
 	public static class TokenizerMapper extends
 			Mapper<Object, Text, Text, IntWritable> {
@@ -67,7 +67,7 @@ public class WordCountStandard {
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
 		Job job = Job.getInstance(conf, "word count");
-		job.setJarByClass(WordCountStandard.class);
+		job.setJarByClass(WordCount.class);
 		job.setMapperClass(TokenizerMapper.class);
 		job.setCombinerClass(IntSumReducer.class);
 		job.setReducerClass(IntSumReducer.class);

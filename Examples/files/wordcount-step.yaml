@@ -22,7 +22,7 @@ mapred:
 
     - name: Wordcount
       jar: Examples.jar
-      classname: wordcount.WordCountFeedback
+      classname: wordcount.WordCountStep
 
   inputs:
 
