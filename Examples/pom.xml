@@ -48,35 +48,27 @@
 							<artifactSet>
 								<includes>
 									<include>genepi-hadoop:genepi-hadoop:*:*</include>
-								</includes>
+							</includes>
 							</artifactSet>
-
-
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
-
-
 	</build>
-
-	<dependencyManagement>
-		<dependencies>
-
-
-		</dependencies>
-	</dependencyManagement>
 	<dependencies>
 
 		<dependency>
 			<groupId>genepi-hadoop</groupId>
 			<artifactId>genepi-hadoop</artifactId>
-			<version>0.7.4</version>
+			<version>0.7.6</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.10</artifactId>
+			<version>1.2.0-cdh5.3.1</version>
+		</dependency>
 
 	</dependencies>
 

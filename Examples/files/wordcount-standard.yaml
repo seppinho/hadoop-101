@@ -22,7 +22,7 @@ mapred:
 
     - name: Wordcount
       jar: Examples.jar 
-      params: wordcount.WordCount $input $output
+      params: cloudgenewordcount.WordCount $input $output
 
   inputs:
 

@@ -1,4 +1,4 @@
-package wordcount;
+package cloudgenewordcount;
 
 import genepi.hadoop.common.ContextLog;
 import genepi.hadoop.common.StepRunner;
