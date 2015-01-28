@@ -1,5 +1,5 @@
 name: WordCount Spark
-description:  Integrates Spark into Cloudgene!
+description:  Integrates Spark into Cloudgene! Based on https://github.com/sryza/simplesparkapp
 version: 1.0.1
 website: 
 category: Genepi Hadoop Examples
