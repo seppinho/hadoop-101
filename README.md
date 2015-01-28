@@ -1,8 +1,8 @@
 Cloudgene and Hadoop YARN
 =========
 This tutorial introduces Cloudgene, a graphical workflow system for Hadoop YARN. It shows how a simple WordCount program is designed with Hadoop Mapreduce using the standard interfaces. We introduce the genepi-hadoop library to efficiently distribute parameters, using the distributed cache and guarantee the correct order of calls.
-The tutorial further shows how to connect applications (such as WordCount) into Cloudgene to execute them graphically.
-
+The tutorial further shows how to connect applications based on MapReduce or Spark (such as kWordCount) into Cloudgene to execute them graphically.
+Spark Example has been taken from https://github.com/sryza/simplesparkapp and the Biowordcount MapReduce from https://github.com/plantimals
 
 
 ### Word Count Example
