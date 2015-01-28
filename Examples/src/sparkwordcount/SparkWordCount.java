@@ -121,6 +121,7 @@ public class SparkWordCount {
     );
     
     System.out.println(charCounts.collect());
+    charCounts.saveAsTextFile(args[2]);
     sc.close();
     
   }

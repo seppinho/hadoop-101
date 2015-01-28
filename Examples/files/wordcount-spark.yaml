@@ -1,0 +1,50 @@
+name: WordCount Spark
+description:  Integrates Spark into Cloudgene!
+version: 1.0.1
+website: 
+category: Genepi Hadoop Examples
+
+
+cluster:
+
+  image: us-east-1/ami-da0cf8b3
+  type: m1.large,m1.xlarge
+  ports: 80,50030,50070
+  creationOnly: false
+  installMapred: true
+  initScript: install.sh
+  service: hadoop
+ 
+
+mapred:
+
+  steps:
+
+  - name: Running Spark
+    spark: Examples.jar
+    classname: sparkwordcount.SparkWordCount
+    params: $input $pattern $output
+
+
+  inputs:
+
+    - id: input
+      description: Input
+      type: hdfs-folder
+      
+    - id: pattern
+      description: Find the pattern
+      type: number
+      value: 2   
+
+  outputs:
+     
+    - id: output
+      description: Output
+      type: hdfs-folder
+      removeHeader: false
+      download: true
+      temp: true
+      zip: false
+      mergeOutput: false
+
