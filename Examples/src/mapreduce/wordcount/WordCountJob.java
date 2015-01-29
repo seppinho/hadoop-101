@@ -1,4 +1,4 @@
-package cloudgenewordcount;
+package mapreduce.wordcount;
 
 import genepi.hadoop.HadoopJob;
 

@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-package wordcount;
+package mapreduce.wordcount;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -31,7 +31,7 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class WordCount {
+public class WordCountSimple {
 
 	public static class TokenizerMapper extends
 			Mapper<Object, Text, Text, IntWritable> {
@@ -67,7 +67,7 @@ public class WordCount {
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
 		Job job = Job.getInstance(conf, "word count");
-		job.setJarByClass(WordCount.class);
+		job.setJarByClass(WordCountSimple.class);
 		job.setMapperClass(TokenizerMapper.class);
 		job.setCombinerClass(IntSumReducer.class);
 		job.setReducerClass(IntSumReducer.class);

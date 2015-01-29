@@ -1,7 +1,7 @@
-name: WordCount Spark
-description:  Integrates Spark-WordCount (https://github.com/sryza/simplesparkapp) into Cloudgene.
+name: BioWordCount Spark
+description:  Integrates Spark-BioWordcount (https://github.com/plantimals) into Cloudgene.
 version: 1.0
-website: https://github.com/sryza/simplesparkapp
+website: https://github.com/plantimals
 category: Genepi Hadoop Examples
 
 
@@ -21,22 +21,17 @@ mapred:
   steps:
 
   - name: Running Spark
-    spark: Examples.jar
-    mainClass: spark.wordcount.SparkWordCount
-    params: $input $pattern $output
+    spark: biowordcount-spark_2.10-1.0.jar
+    mainClass: BioWordCountSpark
+    params: $input $output
 
 
   inputs:
 
     - id: input
-      description: Input
+      description: VCF File
       type: hdfs-folder
       
-    - id: pattern
-      description: Find the pattern
-      type: number
-      value: 2   
-
   outputs:
      
     - id: output

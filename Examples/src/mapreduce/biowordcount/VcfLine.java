@@ -1,4 +1,4 @@
-package biowordcount;
+package mapreduce.biowordcount;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

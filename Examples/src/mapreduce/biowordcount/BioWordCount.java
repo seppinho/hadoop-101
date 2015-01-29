@@ -1,4 +1,4 @@
-package biowordcount;
+package mapreduce.biowordcount;
 
 import java.io.IOException;
 

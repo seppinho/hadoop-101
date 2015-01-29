@@ -16,7 +16,7 @@
  * limitations under the License.
  */
  
-package sparkwordcount;
+package spark.wordcount;
 
 import java.util.ArrayList;
 import java.util.Arrays;

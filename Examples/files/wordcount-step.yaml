@@ -1,5 +1,5 @@
-name: WordCount (Workflow Step)
-description:  Integrates WordCount into Cloudgene!
+name: WordCount
+description:  Integrates MR-WordCount into Cloudgene
 version: 1.0.1
 website: 
 category: Genepi Hadoop Examples
@@ -22,7 +22,7 @@ mapred:
 
     - name: Wordcount
       jar: Examples.jar
-      classname: cloudgenewordcount.WordCountStep
+      classname: mapreduce.wordcount.WordCountStep
 
   inputs:
 

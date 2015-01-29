@@ -1,4 +1,4 @@
-package cloudgenewordcount;
+package mapreduce.wordcount;
 
 import java.io.IOException;
 
