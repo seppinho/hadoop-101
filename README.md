@@ -4,7 +4,9 @@ This repository includes some basic Hadoop YARN Examples (MapReduce and Spark) c
 
 ## Ressources
 SparkWordCount: https://github.com/sryza/simplesparkapp
+
 BioWordCount for MapReduce and Spark: https://github.com/plantimal
+
 Compiled for cdh 5.3.1
 
 ## Running Wordcount in Cloudgene
