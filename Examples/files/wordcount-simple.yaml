@@ -1,5 +1,5 @@
 name: WordCount
-description:  Integrates MR-WordCount (Default) into Cloudgene
+description:  Integrates MapReduce-WordCount Simple (External Process) into Cloudgene.
 version: 1.0
 website: http://hadoop.apache.org/
 category: Genepi Hadoop Examples
