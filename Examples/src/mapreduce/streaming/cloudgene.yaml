@@ -1,0 +1,36 @@
+name: Wordcount-Streaming
+description: A very basic streaming example
+category: Hadoop Examples
+website: http://wiki.apache.org/hadoop/WordCount
+author: Hadoop Team
+
+cluster:
+  image: us-east-1/ami-da0cf8b3
+  type: m1.large,m1.xlarge
+  ports: 80,50030,50070
+  service: hadoop
+  installMapred: true
+  properties: hadoop-mapreduce.mapred.tasktracker.map.tasks.maximum=3
+
+mapred:
+
+  steps:
+    - name: Align
+      mapper: Mapper.py
+      reducer:  Reducer.py
+      params: -input $input
+          -output $output
+          -file Mapper.py
+          -file Reducer.py 
+  
+  inputs:
+  - id: input
+    description: Input Folder
+    type: hdfs-folder
+
+  outputs:
+  - id: output
+    description: Output Folder
+    type: hdfs-folder
+    mergeOutput: true
+    download: true
