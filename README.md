@@ -1,11 +1,18 @@
 Cloudgene and Hadoop YARN
 =========
-This tutorial introduces Cloudgene, a graphical workflow system for Hadoop YARN. It shows how a simple WordCount program is designed with Hadoop Mapreduce using the standard interfaces. We introduce the genepi-hadoop library to efficiently distribute parameters, using the distributed cache and guarantee the correct order of calls.
-The tutorial further shows how to connect applications based on MapReduce or Spark (such as kWordCount) into Cloudgene to execute them graphically.
-Spark Example has been taken from https://github.com/sryza/simplesparkapp and the Biowordcount MapReduce from https://github.com/plantimals
+This repository includes some basic Hadoop YARN Examples (MapReduce and Spark) compiled for CDH 5.3. All examples can be run either on the command line or within Cloudgene, our graphical workflow system for Hadoop. 
 
+## Ressources
+SparkWordCount: https://github.com/sryza/simplesparkapp
 
-### Word Count Example
+BioWordCount for MapReduce and Spark: https://github.com/plantimal
+
+Compiled for cdh 5.3.1
+
+## Running Wordcount in Cloudgene
+First we show how a simple WordCount program is designed with Hadoop Mapreduce. We then introduce the genepi-hadoop library to simplify the writing of MapReduce programs. In a last step, we integrate the program into Cloudgene 
+
+### 1) Word Count Standard
 
 #### Mapper
 	public class TokenizerMapper extends
@@ -71,7 +78,7 @@ Spark Example has been taken from https://github.com/sryza/simplesparkapp and th
 
 ----------------------------
 
-### Executing Word Count using genepi-hadoop
+### 2) Word Count using genepi-hadoop
 
 #### Extend HadoopJob by overriding the  setupJob method
 
@@ -141,7 +148,7 @@ The compiled programm is jar file which can be executed with the following comma
 
 ----------------------------
 
-### Cloudgene Integration
+### 3) Cloudgene Integration
 
 #### Command-Line program
 
