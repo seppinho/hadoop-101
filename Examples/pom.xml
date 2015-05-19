@@ -61,13 +61,7 @@
 		<dependency>
 			<groupId>genepi-hadoop</groupId>
 			<artifactId>genepi-hadoop</artifactId>
-			<version>0.7.6</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-core_2.10</artifactId>
-			<version>1.2.0-cdh5.3.1</version>
+			<version>0.8.0</version>
 		</dependency>
 
 	</dependencies>
