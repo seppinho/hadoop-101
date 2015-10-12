@@ -39,5 +39,5 @@ mapred:
       download: true
       temp: true
       zip: false
-      mergeOutput: false
+      mergeOutput: true
 
