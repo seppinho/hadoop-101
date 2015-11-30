@@ -3,7 +3,7 @@ name: Cloudgene WFS
 apps:
   - id: wordcount
     permission: user
-    filename: applications/Examples/wordcount/wordcount-mr-step.yaml
+    filename: applications/Examples/files/wordcount-mr-step.yaml
 hadoopPath: /usr
 hdfsWorkspace: cloudgene-workspace-hdfs
 localWorkspace: cloudgene-workspace-local
