@@ -21,7 +21,7 @@ mapred:
   steps:
 
     - name: Wordcount
-      jar: Examples.jar
+      jar: target/Examples.jar
       classname: mapreduce.wordcount.WordCountStep
 
   inputs:
