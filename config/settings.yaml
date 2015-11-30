@@ -1,5 +1,5 @@
 !cloudgene.mapred.util.Settings
-name: Cloudgene WFS
+name: Cloudgene WF
 apps:
   - id: wordcount
     permission: user
