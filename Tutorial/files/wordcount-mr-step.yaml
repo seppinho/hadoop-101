@@ -1,7 +1,7 @@
 name: WordCount
 description:  Integrates MapReduce-WordCount as a Step (Same Process) into Cloudgene
 version: 1.0.1
-website: 
+website:
 category: Genepi Hadoop Examples
 
 
@@ -14,14 +14,14 @@ cluster:
   installMapred: true
   initScript: install.sh
   service: hadoop
- 
+
 
 mapred:
 
   steps:
 
     - name: Wordcount
-      jar: ../target/Examples.jar
+      jar: ../target/Wordcount.jar
       classname: mapreduce.wordcount.WordCountStep
 
   inputs:
@@ -31,7 +31,7 @@ mapred:
       type: hdfs-folder
 
   outputs:
-     
+
     - id: output
       description: Output
       type: hdfs-folder
@@ -40,4 +40,3 @@ mapred:
       temp: true
       zip: false
       mergeOutput: true
-
