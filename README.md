@@ -1,13 +1,11 @@
 Cloudgene and Hadoop YARN
 =========
-This repository includes some basic Hadoop YARN Examples (MapReduce and Spark) compiled for CDH 5.3. All examples can be run either on the command line or within Cloudgene, our graphical workflow system for Hadoop. 
+This repository includes some basic Hadoop YARN Examples (MapReduce and Spark) compiled for the latest CDH version. All examples can be run either on the command line or within [Cloudgene)(http://cloudgene.uibk.ac.at), our graphical workflow system for Hadoop. 
 
 ## Ressources
 SparkWordCount: https://github.com/sryza/simplesparkapp
 
 BioWordCount for MapReduce and Spark: https://github.com/plantimal
-
-Compiled for cdh 5.3.1
 
 ## Running Wordcount in Cloudgene
 First we show how a simple WordCount program is designed with Hadoop Mapreduce. We then introduce the genepi-hadoop library to simplify the writing of MapReduce programs. In a last step, we integrate the program into Cloudgene 
