@@ -1,6 +1,5 @@
 
 #A simple Hadoop Tutorial from Code to Results
-
 =========
 This repository includes some basic Hadoop YARN Examples (MapReduce and Spark) compiled for the latest CDH version. All examples can be run either on the command line or within [Cloudgene)(http://cloudgene.uibk.ac.at), our graphical workflow system for Hadoop. 
 
