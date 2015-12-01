@@ -1,4 +1,4 @@
-name: WordCount
+name: WordCount Improved
 description:  Integrates MapReduce-WordCount as a Step (Same Process) into Cloudgene
 version: 1.0.1
 website:
