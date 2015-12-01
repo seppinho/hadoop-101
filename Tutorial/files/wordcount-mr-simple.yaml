@@ -21,7 +21,7 @@ mapred:
   steps:
 
     - name: Wordcount
-      jar: Examples.jar 
+      jar: ../target/Wordcount.jar 
       params: mapreduce.wordcount.WordCountSimple $input $output
 
   inputs:
