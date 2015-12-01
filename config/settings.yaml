@@ -3,16 +3,10 @@ name: Cloudgene WF
 apps:
   - id: wordcount
     permission: user
-    filename: applications/Examples/files/wordcount-mr-step.yaml
+    filename: applications/Tutorial/files/wordcount-mr-step.yaml
 hadoopPath: /usr
 hdfsWorkspace: cloudgene-workspace-hdfs
 localWorkspace: cloudgene-workspace-local
-mail:
-   port:
-   smtp:
-   name:
-   password:
-   user:
 maxRunningJobs: 10
 maxRunningJobsPerUser: 1
 notificationAfter: 7
